@@ -1,0 +1,58 @@
+{
+  "name": "lc01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack --node-env=development --watch",
+    "start:dev": "webpack serve"
+  },
+  "keywords": [
+    "lc01"
+  ],
+  "author": "lc01",
+  "license": "LGPL",
+  "devDependencies": {
+    "autoprefixer": "^10.2.4",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.0.2",
+    "ejs-loader": "^0.5.0",
+    "file-loader": "^6.2.0",
+    "handlebars-loader": "^1.7.1",
+    "html-webpack-plugin": "^5.2.0",
+    "ignore-loader": "^0.1.2",
+    "ip": "^1.1.5",
+    "json-loader": "^0.5.7",
+    "node-sass": "^5.0.0",
+    "node-sass-magic-importer": "^5.3.2",
+    "null-loader": "^4.0.1",
+    "path": "^0.12.7",
+    "postcss-js": "^3.0.3",
+    "postcss-loader": "^5.0.0",
+    "postcss-nested": "^5.0.3",
+    "precss": "^4.0.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "backbone": "^1.4.0",
+    "backbone.localstorage": "^2.0.2",
+    "debug": "^4.3.1",
+    "devtools-detector": "^1.0.22",
+    "fs": "0.0.1-security",
+    "jquery": "^3.5.1",
+    "jshint": "^2.12.0",
+    "lodash": "^4.17.21",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.0",
+    "video.js": "^7.11.4",
+    "videojs-hotkeys": "^0.2.27"
+  }
+}

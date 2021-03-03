@@ -1,0 +1,19 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "chrome": "61"
+        },
+        "debug": true
+      }
+    ]
+  ],
+  "sourceMaps": true,
+  "plugins": [
+    [
+      "transform-runtime"
+    ]
+  ]
+}

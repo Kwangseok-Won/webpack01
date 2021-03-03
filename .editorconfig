@@ -1,0 +1,82 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# @see editorconfig.org
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+# we recommend you to keep these unchanged
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.rst]
+trim_trailing_whitespace = false
+
+[*.diff]
+trim_trailing_whitespace = false
+
+[*.py]
+indent_style = space
+
+[*.as]
+indent_style = space
+
+[*.html]
+indent_style = space
+indent_size = 2
+
+[*.css]
+indent_style = space
+indent_size = 2
+
+[*.js]
+indent_style = space
+
+[*.json]
+indent_style = space
+indent_size = 2
+
+[*.xml]
+indent_style = space
+
+[*.sass]
+indent_style = space
+indent_size = 2
+
+[*.scss]
+indent_style = space
+indent_size = 2
+
+[*.less]
+indent_style = space
+indent_size = 2
+
+[*.ejs]
+indent_style = space
+
+[*.hbs]
+indent_style = space
+
+[*.handlebars]
+indent_style = space
+
+[app/**.js]
+indent_style = space
+indent_size = 2
+
+[app/**.js]
+indent_style = space
+indent_size = 2
+
+[{package.json,bower.json,jscs.json,.babelrc,.bowerrc,.jshintrc,.editorconfig,.git*.tbravis.yml}]
+indent_style = space
+indent_size = 2
