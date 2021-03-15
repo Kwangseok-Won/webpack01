@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack --node-env=development --watch",
-    "start:dev": "webpack serve"
+    "start:dev": "webpack serve --hot --host 0.0.0.0 --port 9638"
   },
   "keywords": [
     "lc01"

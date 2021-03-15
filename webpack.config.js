@@ -32,14 +32,14 @@ const configDevServer = {
     'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
   },
   host: '0.0.0.0',
-  port: 8080,
+  port: 9638,
   open: true,
   https: false,
   disableHostCheck: true,
 }
 
 const configEntries = [
-  `webpack-dev-server/client?http://0.0.0.0:8080/`,
+  `webpack-dev-server/client?http://0.0.0.0:9638/`,
   // 'webpack-dev-server/client?http://' + require("os").hostname() + ':8080/',
   // 'webpack-dev-server/client?http://' + require("ip").address() + ':8080/',
   // `webpack-dev-server/client?http://localhost:8080/`,
@@ -111,7 +111,29 @@ const configPlugins = [
     inject: 'body',
   }),
   require('precss'),
-  require('autoprefixer')
+  require('autoprefixer'),
+  new webpack.LoaderOptionsPlugin({
+    options: {
+      postcss() {
+        return [
+          postcssImport({
+            addDependencyTo: webpack,
+          }),
+          autoprefixer({
+            //remove: true,
+            browsers: [
+              'chrome 61'
+            ]
+          })
+        ]
+      },
+      sassLoader: {
+        importer: nodeSassMagicImporter({
+          disableImportOnce: true,
+        })
+      }
+    }
+  })
 ]
 
 const configs = {
@@ -137,7 +159,7 @@ const configs = {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
-              sourceMaps: true
+              sourceMap: true
             }
           }, {
             loader: 'postcss-loader', 
@@ -148,10 +170,10 @@ const configs = {
       { test: /\.md$/, loader: 'null-loader' },
       { test: /\.txt$/, loader: 'null-loader' },
       { test: /\.ejs$/, exclude: [/node_modules/], 
-        query: { id: 'ejs' } 
+        // query: { id: 'ejs' } 
       },
       { test: /\.scss$/, 
-        query: { id: 'scss' } 
+        // query: { id: 'scss' } 
       },
       {
         test: /\.(jpe?g|png|gif)$/,
@@ -165,34 +187,16 @@ const configs = {
     ]
   },
   resolve: {
-    root: [
-      path.resolve(__dirname),
-      path.resolve(__dirname, 'node_modules'),
+    // root: [
+    //   path.resolve(__dirname),
+    //   path.resolve(__dirname, 'node_modules'),
 
-    ],
+    // ],
     alias: {
       'underscore': 'lodash', // for Backbone using lodash instead of underscore
     }
   },
   plugins: configPlugins,
-  postcss() {
-    return [
-      postcssImport({
-        addDependencyTo: webpack,
-      }),
-      autoprefixer({
-        //remove: true,
-        browsers: [
-          'chrome 61'
-        ]
-      })
-    ]
-  },
-  sassLoader: {
-    importer: nodeSassMagicImporter({
-      disableImportOnce: true,
-    })
-  }
 }
 
 if (MODE_DEV_SERVER) {
