@@ -146,7 +146,7 @@ const configs = {
   output: { // Output 속성은 웹팩의 결과물에 대한 정보를 입력하는 속성. 일반적으로 filename과 path를 정의
     path: path.resolve(__dirname, './'),
     filename: '[name].js', // [name]은 위에 entry에서 설정한 파일의 이름
-    chunkFilename: '[id].js',
+    // chunkFilename: '[id].js',
   },
   module: {
     rules: [
