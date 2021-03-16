@@ -9,6 +9,8 @@ import backbone from 'backbone'
 
     window.HELP_IMPROVE_VIDEOJS = false
 
+    console.log('cp01')
+
     // console.log(path.join(__dirname, './'))
 
     let testModel = Backbone.Model.extend({
