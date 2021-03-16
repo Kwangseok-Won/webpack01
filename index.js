@@ -9,7 +9,9 @@ import backbone from 'backbone'
 
     window.HELP_IMPROVE_VIDEOJS = false
 
-    console.log('cp01')
+    console.log('git rebase -i HEAD 01')
+    console.log('git rebase -i HEAD 02')
+    console.log('git rebase -i HEAD 03')
 
     // console.log(path.join(__dirname, './'))
 
