@@ -9,7 +9,7 @@ import backbone from 'backbone'
 
     window.HELP_IMPROVE_VIDEOJS = false
 
-    console.log('rb0');
+    console.log('rb1');
 
     // console.log(path.join(__dirname, './'))
 
