@@ -11,7 +11,7 @@ import backbone from 'backbone'
 
     console.log('-');
     console.log('rb');
-    console.log('rb2');
+    console.log('rb1');
     console.log('-');
 
     // console.log(path.join(__dirname, './'))
