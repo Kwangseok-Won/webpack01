@@ -1,0 +1,52 @@
+css body { background-color: #eee; }
+
+.rideContainer { border: 1px solid #aaa; width: 350px; height: 170px; background-color: #fff; float: left; margin: 5px; } .rideContainer img { float: left; margin: 10px; } .rideContainer ul { list-style-type: none; }
+
+
+#addRide label {
+    width:100px;
+    margin-right:10px;
+    text-align:right;
+    line-height:25px;
+}
+
+#addRide label, #addRide input {
+    display:block;
+    margin-bottom:10px;
+    float:left;
+}
+
+#addRide label[for="title"], #addRide label[for="ridingDate"] {
+    clear:both;
+}
+
+#addRide button {
+    display:block;
+    margin:5px 20px 10px 10px;
+    float: right;
+    clear: both;
+}
+
+#addRide div {
+    width: 550px;
+}
+
+#addRide div:after {
+    content:"";
+    display:block;
+    height:0;
+    visibility:hidden;
+    clear:both;
+    font-size:0;
+    line-height:0;
+}
+
+.rideContainer ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.rideContainer button {
+    float:right;
+    margin: 10px;
+}
